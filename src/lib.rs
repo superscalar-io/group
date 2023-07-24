@@ -111,6 +111,9 @@ pub trait Curve:
 
     /// Converts this element into its affine representation.
     fn to_affine(&self) -> Self::AffineRepr;
+
+    /// SuperScalar
+    fn to_affine_gpu(&self) -> Self::AffineRepr;
 }
 
 pub trait GroupEncoding: Sized {
